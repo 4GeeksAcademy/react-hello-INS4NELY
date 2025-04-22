@@ -5,7 +5,7 @@ const Card = (props) => {
 	return (
 
   <div className="card rounded-3 overflow-hidden">
-    <img src="https://neliosoftware.com/es/wp-content/uploads/sites/3/2018/07/aziz-acharki-549137-unsplash-1200x775.jpg" className="card-img-top" alt="..."/>
+    <img src={props.srcImage} className="card-img-top" alt="..."/>
     <div className="card-body text-center">
       <h5 className="card-title">{props.title}</h5>
       <p className="card-text">{props.text}</p>
@@ -17,6 +17,7 @@ const Card = (props) => {
 };
 
 Card.prototype = {
+    srcImage: PropTypes.string,
     title: PropTypes.string,
     text: PropTypes.string,
     buttonText: PropTypes.string
