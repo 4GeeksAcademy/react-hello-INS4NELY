@@ -20,7 +20,7 @@ const Navbar = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle navigation"
         >
-          <i class="ri-menu-line text-secondary fs-2"></i>
+          <i className="ri-menu-line text-secondary fs-2"></i>
         </button>
 
         <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}>
@@ -35,7 +35,7 @@ const Navbar = () => {
               Services
             </a>
             <a className="nav-link text-white-50" href="#">
-              Contact <i class="bi bi-kanban"></i>
+              Contact <i className="bi bi-kanban"></i>
             </a>
           </div>
         </div>

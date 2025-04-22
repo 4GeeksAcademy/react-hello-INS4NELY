@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes, { string } from 'prop-types';
 
 const Footer = () => {
     return (
@@ -7,5 +8,7 @@ const Footer = () => {
         </div>
     );
 };
+
+
 
 export default Footer;

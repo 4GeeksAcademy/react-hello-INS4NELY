@@ -1,15 +1,21 @@
 import React from "react";
+import PropTypes, { string } from 'prop-types';
 
-const Jumbotron = () => {
+const Jumbotron = (props) => {
     return (
-<div class="p-3 m-5 bg-body-tertiary rounded-3">
-      <div class="container-fluid py-5">
-        <h1 class="display-1 ">A WARM WELCOME! </h1>
-        <p class=" fs-5 py-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia corporis repellat natus ex eveniet temporibus et a veniam blanditiis voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit nihil at id repudiandae amet iure omnis a eum ut quae.</p>
-        <button class="btn btn-primary " type="button">Call to action!</button>
+    <div className="p-3 m-5 bg-body-tertiary rounded-3">
+      <div className="container-fluid py-5">
+        <h1 className="display-1 ">{props.title}</h1>
+        <p className=" fs-5 py-2">{props.text}</p>
+        <button className="btn btn-primary " type="button">{props.btnText}</button>
       </div>
     </div>
     );
 };
 
+Jumbotron.prototype = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  btnText: PropTypes.string
+}
 export default Jumbotron;
